@@ -94,8 +94,8 @@ section h3 {
 
 /* List appearance */
 .participants-list {
-  list-style: disc;
-  margin: 8px 0 0 18px;
+  list-style: none;
+  margin: 8px 0 0 0;
   padding: 0;
   max-height: 120px;
   overflow: auto;
@@ -109,6 +109,33 @@ section h3 {
   border: 1px solid #f0f0ff;
   color: #222;
   font-size: 14px;
+}
+
+/* Participant item layout: email + remove button */
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.participant-email {
+  word-break: break-all;
+  flex: 1 1 auto;
+}
+
+.remove-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.remove-participant:hover {
+  background: rgba(198,40,40,0.08);
 }
 
 /* Subtle style for when no participants exist */
